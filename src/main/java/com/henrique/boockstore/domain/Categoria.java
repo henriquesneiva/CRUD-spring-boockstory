@@ -14,12 +14,13 @@ import javax.persistence.OneToMany;
 public class Categoria implements Serializable{
 
 	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private String categoria;
-	
+	private String descricao;
+
 	@OneToMany(mappedBy = "categoria")
 	private List<Livro> livros = new ArrayList<>();
 
@@ -27,11 +28,11 @@ public class Categoria implements Serializable{
 		super();
 	}
 
-	public Categoria(Integer id, String nome, String categoria) {
+	public Categoria(Integer id, String nome, String descricao) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.categoria = categoria;
+		this.descricao = descricao;
 	}
 
 	public Integer getId() {
@@ -50,12 +51,12 @@ public class Categoria implements Serializable{
 		this.nome = nome;
 	}
 
-	public String getCategoria() {
-		return categoria;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public List<Livro> getLivros() {
@@ -90,6 +91,5 @@ public class Categoria implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
+
 }
