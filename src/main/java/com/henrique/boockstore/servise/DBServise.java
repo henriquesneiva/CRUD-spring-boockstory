@@ -23,6 +23,7 @@ public class DBServise {
 		Categoria cat1 = new Categoria(null, "informatica", "livros de ti");
 		Categoria cat2 = new Categoria(null, "ficao", "ti");
 		Categoria cat3 = new Categoria(null, "programacao", "livros de ti");
+		Categoria cat4 = new Categoria(null, "programacao", "livros");
 		
 		Livro l1 = new Livro(null, "Clean Code", "Robbert M", "LOren Ipslon hshs", cat1);
 		Livro l2 = new Livro(null, " programacao limpa", "Robbert M", "LOren Ipslon hshs", cat3);
@@ -33,7 +34,7 @@ public class DBServise {
 		cat1.getLivros().addAll(Arrays.asList(l3));
 		cat3.getLivros().addAll(Arrays.asList(l2));
 		
-		this.categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3));
+		this.categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3,cat4));
 		this.livroRepository.saveAll(Arrays.asList(l1,l2,l3,l4));
 		
 	}
