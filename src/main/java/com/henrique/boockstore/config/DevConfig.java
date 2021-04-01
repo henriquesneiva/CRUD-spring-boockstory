@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Profile;
 import com.henrique.boockstore.servise.DBServise;
 
 @Configuration
-@Profile("dev")
+@Profile("prod")
 public class DevConfig {
 
 	@Autowired
